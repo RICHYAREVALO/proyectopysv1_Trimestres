@@ -12,47 +12,41 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=2){
     */
     header('location: ../../index.php');
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="img/png" href="/img/menu.png"/>
-    <link rel="stylesheet" type="text/css" href="css.user/menuempleado.css">
-    <title>Menu</title>
+    <link rel="stylesheet" href="css.user/menuempleado.css">
+    <title>Vista Usuario</title>
 </head>
 <body>
-     <!-- ucfirst convierte la primera letra en mayusculo de una cadena -->
- <nav class="navbar">
+    <header>
+        <h1 id="titulo">Bienvenido a Beyonde Pas y Salvo</h1>
+        <nav class="navbar">
         <div class="container">
             <!-- ucfirst convierte la primera letra en mayusculo de una cadena -->
-            Aministrador <br>
+            <h2 >Usuario </h2><p>
             Hola <?php echo ucfirst($_SESSION['nombre']); ?>!
-            <h1>Pas y Salvo Beyonder</h1>
         <a href="../../controller/cerrarSesion.php">
-        <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion
+       <button  id="animatedButton" class="animated-button"> Cerrar sesion</button>
         </a>
-            
         </div>
     </nav>
-    <h1>Paz y Salvo Beyonber</h1>
-    <p>
-        <h2>Empleado</h2>
-
-<nav>
-	<a href="solicitar.html">Solicitar</a>
-	<a href="consultarusuario.html">Consultar</a>
-	<a href="imprimir.html">Imprimir</a>
-    <a href="contactenos.html">Contactenos</a>
-    <a href="index.html">Salir</a>
-	<div class="animation start-home"></div>
-</nav>
-
+        <nav>
+            <ul>
+                <li><a href="solicitar.html" id="inicio">Solicitar PYS</a></li>
+                <li><a href="consultarusuario.html" id="acerca">Consultar PYS</a></li>
+                <li><a href="imprimir.html" id="servicios">Imprimir PYS</a></li>
+                <li><a href="contactenos.html" id="contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
     
+
+    <script src="js/user.js"></script>
 </body>
 </html>
 

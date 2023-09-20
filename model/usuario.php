@@ -116,7 +116,7 @@
           echo 'view/admin/index.php';
         }else if($_SESSION['cargo'] == 2){
           echo 'view/user/index.php';
-        }else if($_SESSION['cargo'] == 3){
+        }else{
           echo 'view/jefes/jefes.php';
         }
 
