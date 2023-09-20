@@ -9,10 +9,11 @@ body {
 	width: 100%;
 	height:100%;
 	font-family: 'Open Sans', sans-serif;
-  background-image: url(  https://fondosanimados.com/wp-content/uploads/2023/04/barcos-1.jpg);
+  background-image: url("../img/fondobeyonder.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  
+  background-position: center center;
+
   
 }
 

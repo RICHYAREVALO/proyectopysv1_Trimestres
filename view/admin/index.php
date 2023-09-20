@@ -43,7 +43,7 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=1){
             <!-- ucfirst convierte la primera letra en mayusculo de una cadena -->
             Aministrador <br>
             Hola <?php echo ucfirst($_SESSION['nombre']); ?>!
-            <h1>Pas y Salvo Beyonder</h1>
+            <h1>Paz y Salvo Beyonder</h1>
         <a href="../../controller/cerrarSesion.php">
         <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion
         </a>
