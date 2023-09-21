@@ -3,7 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    
+    background-image: url("../../../img/beyonder22.jpg");
+   
+
 }
 
 .container {
@@ -42,7 +44,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(6,14,131);
+    color: rgb(9, 10, 20);
     font-weight: bold;
     cursor: pointer;
 }
@@ -129,7 +131,7 @@ h1 {
 
 /* Estilos del botón */
 .modal-button {
-    background-color: rgb(6,14,131);
+    background-color: rgb(48, 56, 168);
     color: #fff;
     border: none;
     padding: 10px 20px;
