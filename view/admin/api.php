@@ -35,14 +35,15 @@ function save_member(){
     global $conn;
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $id = $_POST['id'];
-        $nombre = addslashes($conn->real_escape_string($_POST['nombre']));
-        $telefono = addslashes($conn->real_escape_string($_POST['telefono']));
-        $email = addslashes($conn->real_escape_string($_POST['email']));
+        $nombre = addslashes($conn->real_escape_string($_POST['name']));
+        $email = addslashes($conn->real_escape_string($_POST['contact']));
+        $cargo = addslashes($conn->real_escape_string($_POST['address']));
         if(empty($id) || !is_numeric($id)){
-            $sql = "INSERT INTO `usuarios` (`nombre`, `email`, `telefono`)
-                VALUES ('{$nombre}', '{$email}', '{$telefono}')";
+            $sql = "INSERT INTO `usuarios` (`nombre`, `email`, `cargo`)
+                VALUES ('{$nombre}', '{$email}', '{$cargo}')";
         }else{
-            $sql = "UPDATE `usuarios` set `nombre` = '{$nombre}', `email` = '{$email}', `telefono` = '{$telefono}' where `id` = '{$id}' ";
+            
+            $sql = "UPDATE `usuarios` set `nombre` = '{$nombre}', `contact` = '{$email}', `address` = '{$cargo}' where `id` = '{$id}' ";
         }
         $save = $conn->query($sql);
         if($save){
@@ -120,3 +121,4 @@ if(!empty($action)){
     $resp['error'] = 'Action must not be empty';
     return $resp;
 }
+
