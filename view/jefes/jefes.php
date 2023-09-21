@@ -56,14 +56,13 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=3){
                     <td>1</td>
                     <td>Juan</td>
                     <td>juan@gmail.com</td>
-                    <td><button>pendiente</button></td>
+                    <td><a href="firmas.html"><button>pendiente</button></td></a>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Maria</td>
                     <td>maria@gmail.com</td>
-                    <td><button>pendiente</button></td>
-                </tr>
+                    <td><a href="firmas.html"><button>pendiente</button></td></a>                </tr>
                 <tr>
                     <td>3</td>
                     <td>Carlos</td>
