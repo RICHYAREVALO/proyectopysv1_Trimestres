@@ -24,7 +24,7 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=3){
 </head>
 <body>
     <header>
-        <img src="../../img/beyonder22.jpg" alt="">
+        
         <h1 id="titulo">Bienvenido a Beyonde Pas y Salvo</h1>
         <nav class="navbar">
         <div class="container">
@@ -36,14 +36,7 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=3){
         </a>
         </div>
     </nav>
-        <nav>
-            <ul>
-                <li><a href="#" id="inicio">Inicio</a></li>
-                <li><a href="#" id="acerca">Acerca de</a></li>
-                <li><a href="#" id="servicios">Servicios</a></li>
-                <li><a href="#" id="contacto">Contacto</a></li>
-            </ul>
-        </nav>
+        
     </header>
     <main>
         <section class="contenido" id="contenido-principal">
