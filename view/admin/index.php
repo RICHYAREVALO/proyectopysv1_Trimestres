@@ -36,7 +36,7 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=1){
     
 </head>
 
-<body class="fondo" background="./img/fondobeyonder.jpg">
+<body>
    
     <nav class="navbar">
         <div class="container">

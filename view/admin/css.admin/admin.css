@@ -6,10 +6,10 @@
 }
 
 body {
-  min-height: 100%;
-  width: 100%;
-  background-image: url("img/fondobeyonder.jpg")
  
+  width: 100%;
+  background-image: url("../../../img/fondobeyonder.jpg")
+  
 }
 
 .navbar{
