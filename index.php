@@ -71,7 +71,7 @@ if(isset($_SESSION['id'])){
                 <img src="img/load.gif" width="100%" alt="">
               </div>
               <div class="col-xs-12 center text-accent">
-                <span>Validando información...</span>
+                <span>Validando información..</span>
               </div>
             </div>
             <!-- Fin load -->
