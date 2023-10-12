@@ -43,7 +43,7 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=1){
             <!-- ucfirst convierte la primera letra en mayusculo de una cadena -->
             Aministrador <br>
             Hola <?php echo ucfirst($_SESSION['nombre']); ?>!
-            <h1>Pas y Salvo Beyonder</h1>
+            <h1>Paz y Salvo Beyonder</h1>
         <a href="../../controller/cerrarSesion.php">
         <i class="fa-solid fa-right-from-bracket"></i> Cerrar sesion
         </a>
@@ -105,15 +105,15 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=1){
                             <input type="hidden" name="id">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nombre</label>
-                                <input type="text" class="form-control rounded-0" name="name" id="name" required="required">
+                                <input type="text" class="form-control rounded-0" name="nombre" id="nombre" required="required">
                             </div>
                             <div class="mb-3">
                                 <label for="contact" class="form-label">Email</label>
-                                <input type="text" class="form-control rounded-0" name="contact" id="contact" required="required">
+                                <input type="text" class="form-control rounded-0" name="email" id="email" required="required">
                             </div>
                             <div class="mb-3">
                                 <label for="address" class="form-label">Rol</label>
-                                <textarea rows="2" class="form-control rounded-0" name="address" id="address" required="required"></textarea>
+                                <textarea rows="2" class="form-control rounded-0" name="cargo" id="cargo" required="required"></textarea>
                             </div>
                         </form>
                     </div>

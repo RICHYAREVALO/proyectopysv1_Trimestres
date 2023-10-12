@@ -106,9 +106,9 @@ function edit_member($id=0){
         if(!!data.status){
             if(data.status == 'success'){
                 memberForm.querySelector('input[name="id"]').value = data.data.id
-                memberForm.querySelector('input[name="name"]').value = data.data.name
-                memberForm.querySelector('input[name="contact"]').value = data.data.contact
-                memberForm.querySelector('textarea[name="address"]').value = data.data.address
+                memberForm.querySelector('input[name="nombre"]').value = data.data.nombre
+                memberForm.querySelector('input[name="email"]').value = data.data.email
+                memberForm.querySelector('textarea[name="cargo"]').value = data.data.cargo
                 modal.querySelector('.modal-title').innerText = "Editar Información del Usuario";
                 formModal.show()
             }else if(!!data.error){
