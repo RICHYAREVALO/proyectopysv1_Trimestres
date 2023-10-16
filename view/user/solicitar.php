@@ -47,7 +47,7 @@ if (!isset($_SESSION['cargo']) || $_SESSION['cargo'] != 2) {
     <br>
     <br>
     <p>
-    <form action="recibe.html" method="post">
+    <form action="view/jefes/jefes.php" method="post">
 
       <center>
         <p src="imagenes/marco.png" class="fant">Bienvenido(a)al sistema de expedición de paz y salvo empresarial<br>
