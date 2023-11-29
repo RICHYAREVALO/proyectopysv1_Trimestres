@@ -48,7 +48,7 @@ class jefes extends Conectar{
         $conectar= parent::conexion();
         parent::set_names();
         $sql="UPDATE  jefes set
-            estado_jefe = '0'
+            estado_jefe = 'inactivo'
             WHERE
             id_jefe = ?";
         $sql=$conectar->prepare($sql);

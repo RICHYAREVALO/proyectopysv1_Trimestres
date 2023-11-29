@@ -7,24 +7,24 @@ $jefes = new Jefes();
 
 $body = json_decode(file_get_contents("php://input"), true);
 
-switch($_GET["op"]){
+switch($_GET["paz"]){
 
-    case "GetAll":
+    case "c_general":
         $datos=$jefes->get_jefes();
         echo json_encode($datos);
         break;
 
-        case "GetId":
+        case "c_id":
             $datos=$jefes->get_jefes_x_id($body["id_jefe"]);
             echo json_encode($datos);
             break;
 
-            case "Insert":
+            case "insert":
                 $datos=$jefes->insert_jefes($body["nom_jefe"]);
                 echo json_encode("Insert Correcto");
             break;
 
-            case "Update":
+            case "actualizar":
                 $datos=$jefes->update_jefes($body["id_jefe"],$body["nom_jefe"]);
                 echo json_encode("Update Correcto");
             break;
@@ -34,12 +34,12 @@ switch($_GET["op"]){
                 echo json_encode("desactivacion  Correcta");
             break;
 
-            case "Activar":
+            case "activar":
                 $datos=$jefes->activar_jefes($body["id_jefe"]); 
                 echo json_encode("activacion  Correcta");
             break;
 
-            case "Eliminar":
+            case "eliminar":
                 $datos=$jefes->eliminar_jefes($body["id_jefe"]);
                 echo json_encode("Eliminacion  Correcta");
             break;
