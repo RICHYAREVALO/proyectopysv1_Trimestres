@@ -7,7 +7,7 @@ $paz_salvo = new paz_salvo_model();
 
 $body = json_decode(file_get_contents("php://input"), true);
 
-switch($_GET["op"]){
+switch($_GET["paz"]){
 
     case "GetAll":
         $datos=$paz_salvo->get_paz_salvo();
