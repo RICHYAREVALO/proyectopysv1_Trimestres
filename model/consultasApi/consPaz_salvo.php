@@ -1,11 +1,11 @@
 <?php
 
-class paz_salvo_model extends Conectar{
+class paz_salvo extends Conectar{
 
     public function get_paz_salvo(){
         $conectar= parent::conexion();
         parent::set_names();
-        $sql="SELECT * FROM  paz_salvo WHERE estado = 0";
+        $sql="SELECT * FROM  paz_salvo WHERE estado = 1";
         $sql=$conectar->prepare($sql);
         $sql->execute();
         return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
@@ -53,3 +53,5 @@ class paz_salvo_model extends Conectar{
         $sql->execute();
         return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
     }
+}
+    ?>
