@@ -19,24 +19,28 @@ class usuarios extends Conectar{
         return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
     }
     
-    public function insert_usuarios($nombre,$email,$cargo,$clave){
+    public function insert_usuarios($nombre,$num_doc,$tipo_doc,$email,$cargo,$clave){
         $conectar= parent::conexion();
         parent::set_names();
-        $sql="INSERT INTO  usuarios(id,nombre,email,cargo,clave,estado) VALUES (NULL,?,?,?, MD5(?),'1');";
+        $sql="INSERT INTO  usuarios(id,nombre,num_doc,tipo_doc,email,cargo,clave,estado) VALUES (NULL,?,?,?,?,?, MD5(?),'1');";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $nombre);
-        $sql->bindValue(2, $email);
-        $sql->bindValue(3, $cargo);
-        $sql->bindValue(4, $clave);
+        $sql->bindValue(2, $num_doc);
+        $sql->bindValue(3, $tipo_doc);
+        $sql->bindValue(4, $email);
+        $sql->bindValue(5, $cargo);
+        $sql->bindValue(6, $clave);
         $sql->execute();
         return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function update_usuarios($id,$nombre,$email,$cargo,$clave){
+    public function update_usuarios($id,$nombre,$num_doc,$tipo_doc,$email,$cargo,$clave){
         $conectar= parent::conexion();
         parent::set_names();
         $sql=" UPDATE  usuarios set
             nombre = ?,
+            num_doc = ?,
+            tipo_doc = ?,
             email = ?,
             cargo = ?,
             clave = ?
@@ -44,11 +48,12 @@ class usuarios extends Conectar{
             id = ?";
         $sql=$conectar->prepare($sql);
         $sql->bindValue(1, $nombre);
-        $sql->bindValue(2, $email);
-        $sql->bindValue(3, $cargo);
-        $sql->bindValue(4, $clave);
-        $sql->bindValue(5, $id);
-
+        $sql->bindValue(2, $num_doc);
+        $sql->bindValue(3, $tipo_doc);
+        $sql->bindValue(4, $email);
+        $sql->bindValue(5, $cargo);
+        $sql->bindValue(6, $clave);
+        $sql->bindValue(7, $id);
         $sql->execute();
         return $resultado=$sql->fetchAll(PDO::FETCH_ASSOC);
     }

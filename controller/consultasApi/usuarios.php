@@ -20,12 +20,12 @@ switch($_GET["paz"]){
             break;
 
             case "Insert":
-                $datos=$usuarios->insert_usuarios($body["nombre"],$body["email"],$body["cargo"],$body["clave"]);
+                $datos=$usuarios->insert_usuarios($body["nombre"],$body["num_doc"],$body["tipo_doc"],$body["email"],$body["cargo"],$body["clave"]);
                 echo json_encode("Insert Correcto");
             break;
 
             case "actualizar":
-                $datos=$usuarios->update_usuarios($body["id"],$body["nombre"],$body["email"],$body["cargo"],$body["clave"]);
+                $datos=$usuarios->update_usuarios($body["id"],$body["nombre"],$body["num_doc"],$body["tipo_doc"],$body["email"],$body["cargo"],$body["clave"]);
                 echo json_encode("Update Correcto");
             break;
 

@@ -45,7 +45,7 @@
       */
 
       // traemos el id y el nombre de la tabla usuarios donde el usuario sea igual al usuario ingresado y ademas la clave sea igual a la ingresada para ese usuario.
-      $consulta = 'select id, nombre, cargo from usuarios where email="'.$user.'" and clave= MD5("'.$clave.'")';
+      $consulta = 'select id, nombre,num_doc,tipo_doc, cargo from usuarios where email="'.$user.'" and clave= MD5("'.$clave.'")';
       /*
         Verificamos si el usuario existe, la funcion verificarRegistros
         retorna el número de filas afectadas, en otras palabras si el
@@ -150,7 +150,7 @@
         echo 'error_3';
       }else{
 
-        parent::query('insert into usuarios(nombre, email, clave, cargo) values("'.$name.'", "'.$email.'", MD5("'.$clave.'"), 2)');
+        parent::query('insert into usuarios(nombre,num_doc,tipo_doc, email, clave, cargo) values("'.$name.'", "'.$email.'", MD5("'.$clave.'"), 2)');
 
         session_start();
 

@@ -15,32 +15,32 @@ switch($_GET["paz"]){
         break;
 
         case "c_id":
-            $datos=$paz_salvo->get_paz_salvo_x_id($body["id_usuario"]);
+            $datos=$paz_salvo->get_paz_salvo_x_id($body["id_paz_salvo"]);
             echo json_encode($datos);
             break;
 
             case "insert":
-                $datos=$paz_salvo->insert_paz_salvo($body["id_usuario"],$body["id_paz_salvo"],$body["fecha_registro"],$body["estado"],$body["aprobado_final"]);
+                $datos=$paz_salvo->insert_paz_salvo($body["id_paz_salvo"],$body["aprobado_final"]);
                 echo json_encode("Insert Correcto");
             break;
 
             case "actualizar":
-                $datos=$paz_salvo->update_paz_salvo($body["id_usuario"],$body["id_paz_salvo"],$body["fecha_registro"],$body["estado"]);
+                $datos=$paz_salvo->update_paz_salvo($body["id_paz_salvo"],$body["aprobado_final"]);
                 echo json_encode("Update Correcto");
             break;
 
             case "desactivar":
-                $datos=$paz_salvo->desactivar_paz_salvo($body["id_usuario"]); 
+                $datos=$paz_salvo->desactivar_paz_salvo($body["id_paz_salvo"]); 
                 echo json_encode("desactivacion  Correcta");
             break;
 
             case "activar":
-                $datos=$paz_salvo->activar_paz_salvo($body["id_usuario"]); 
+                $datos=$paz_salvo->activar_paz_salvo($body["id_paz_salvo"]); 
                 echo json_encode("activacion  Correcta");
             break;
 
             case "eliminar":
-                $datos=$paz_salvo->eliminar_paz_salvo($body["id_usuario"]);
+                $datos=$paz_salvo->eliminar_paz_salvo($body["id_paz_salvo"]);
                 echo json_encode("Eliminacion  Correcta");
             break;
 }

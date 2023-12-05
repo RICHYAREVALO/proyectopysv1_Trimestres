@@ -77,6 +77,8 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=1){
                                         <tr>
                                             <th class="text-center">ID</th>
                                             <th class="text-center">Nombre</th>
+                                            <th class="text-center">Numero Documento</th>
+                                            <th class="text-center">Tipo Documento</th>
                                             <th class="text-center">Email</th>
                                             <th class="text-center">Cargo</th>
                                             <th class="text-center">Acción</th>
@@ -106,6 +108,14 @@ if(!isset($_SESSION['cargo']) || $_SESSION['cargo'] !=1){
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nombre</label>
                                 <input type="text" class="form-control rounded-0" name="nombre" id="nombre" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Numero Documento</label>
+                                <input type="number" class="form-control rounded-0" name="num_doc" id="num_doc" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Tipo Documento</label>
+                                <input type="text" class="form-control rounded-0" name="tipo_doc" id="tipo_doc" required="required">
                             </div>
                             <div class="mb-3">
                                 <label for="contact" class="form-label">Email</label>
