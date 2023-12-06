@@ -1,6 +1,8 @@
 <?php
 
   $name   = $_POST['name'];
+  $num_doc   = $_POST['num_doc'];
+  $tipo_docu   = $_POST['tipo_docu'];
   $email  = $_POST['email'];
   $clave  = $_POST['clave'];
   $clave2 = $_POST['clave2'];
@@ -23,7 +25,7 @@
         $usuario = new Usuario();
 
         # Llamamos al metodo login para validar los datos en la base de datos
-        $usuario -> registroUsuario($name, $email, $clave);
+        $usuario -> registroUsuario($name, $num_doc,$tipo_docu,$email, $clave);
 
 
       }else{

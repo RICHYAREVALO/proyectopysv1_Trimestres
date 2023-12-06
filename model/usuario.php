@@ -133,11 +133,13 @@
       parent::cerrar();
     }
 
-    public function registroUsuario($name, $email, $clave)
+    public function registroUsuario($name,$num_doc,$tipo_docu ,$email, $clave)
     {
       parent::conectar();
 
       $name  = parent::filtrar($name);
+      $num_doc  = parent::filtrar($num_doc);
+      $tipo_docu  = parent::filtrar($tipo_docu);
       $email = parent::filtrar($email);
       $clave = parent::filtrar($clave);
 
@@ -150,7 +152,7 @@
         echo 'error_3';
       }else{
 
-        parent::query('insert into usuarios(nombre,num_doc,tipo_doc, email, clave, cargo) values("'.$name.'", "'.$email.'", MD5("'.$clave.'"), 2)');
+        parent::query('insert into usuarios(nombre,num_doc,tipo_doc, email, clave, cargo) values("'.$name.'", "'.$num_doc.'","'.$tipo_docu.'","'.$email.'", MD5("'.$clave.'"), 2)');
 
         session_start();
 

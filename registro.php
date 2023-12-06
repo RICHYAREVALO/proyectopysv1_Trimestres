@@ -70,6 +70,25 @@ session_start();
                 <input type="text" class="form-control" name="email" placeholder="Ingresa tu email">
               </div>
 
+              <div class="spacing-2"></div>
+
+                <!-- Caja de texto para email -->
+                <label class="sr-only" for="user">numero de documento</label>
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                  <input type="number" class="form-control" name="num_doc" placeholder="Ingresa numero de documento">
+                </div>
+
+
+
+                <div class="spacing-2"></div>
+
+                    <!-- Caja de texto para email -->
+                    <label class="sr-only" for="user">tipo de documento</label>
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                      <input type="texto" class="form-control" name="tipo_docu" placeholder="Ingresa tu tipo de documento">
+                    </div>
               <!-- Div espaciador -->
               <div class="spacing-2"></div>
 
