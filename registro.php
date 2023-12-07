@@ -5,7 +5,7 @@ En ocaciones el usuario puede volver al login
 aun si ya exixte una sesion iniciada lo correcto
 es no mostrar otra vez el login sino redireccionarlo
 a su pagina principal mientras exista un sesion entonces 
-creamos un archivo que controle el redireccionamiento
+creamos un archivo que controle el redireccionamiento DDDD
 */
 
 session_start();
