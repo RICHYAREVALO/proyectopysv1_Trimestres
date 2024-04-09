@@ -1,9 +1,0 @@
-<?php
-
-require('../../librerias/fpdf/fpdf.php');
-
-$pdf = new FPDF();
-$pdf->AddPage();
-$pdf->SetFont('Arial', 'B', 16);
-$pdf->Cell(40, 10, 'Paz Y Salvo Be Yonder');
-$pdf->Output();
